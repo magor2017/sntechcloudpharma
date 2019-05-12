@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'content'%}
+    <div style="border:2px solid white;border-radius: 10px 10px;width:40%;margin-left:auto;margin-right: auto;margin-top:20%">
+        <img style="width:15%;margin-left:45%" alt="" src="{% static 'images/ic1.ico'%}" />
+        <div class="row" style="background-color:white;width:90%;margin-left:auto;margin-right: auto">
+            <div class="col-lg-1 col-md-1 col-xs-1 col-sm-1">
+                <i style="position:relative;top:3px;color:blue" class="fas fa-user fa-2x"></i>
+                <!--<i><img style="" alt="" src="{% static 'images/ic1.ico'%}" /></i>-->
+            </div>
+           <div class="col-lg-11 col-md-11 col-xs-11 col-sm-11">
+                <input id="ident" type="text" class="form-control" style="border:1px solid white"/>
+           </div>
+        </div>
+        <div  class="row" style="background-color:white;width:90%;margin-left:auto;margin-right: auto;margin-top:2%;padding-right: 0px">
+                <div class="col-lg-1 col-md-1 col-xs-1 col-sm-1">
+                    <i style="position:relative;top:10px;color:blue">***</i>
+                    <!--<i><img style="" alt="" src="{% static 'images/ic1.ico'%}" /></i>-->
+                </div>
+               <div  class="col-lg-11 col-md-11 col-xs-11 col-sm-11">
+                    <input id="pass" type="password" class="form-control" style="border:1px solid white"/>
+               </div>
+        </div>
+        <div style="text-align: center;margin-top:5%;margin-bottom: 5%">
+            <button id="go" class="btn btn-success btn-lg">Go</button>
+        </div>
+        
+    </div>
+{% endblock %}

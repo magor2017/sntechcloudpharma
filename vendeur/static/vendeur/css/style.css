@@ -1,0 +1,22 @@
+body{
+   /* background-image: url('../images/first.png');*/
+   background-image: url("../images/first.png");
+   background-position: center;
+}
+#menu{
+    border:2px solid white;
+    padding: 0px;
+}
+#menu li{
+    font-size: 1.1em;
+    list-style-type: none;
+    text-align: center;
+    cursor: pointer;
+}
+#menu li:active{
+    background-color: blue;
+    color:white;
+}
+#menu i{
+    display:block;
+}

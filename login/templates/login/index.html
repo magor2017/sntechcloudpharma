@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CLOUDPHARMA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/style.css'%}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-4.3.1-dist/css/bootstrap.min.css'%}" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="bar" style="width: 60%;margin-left:auto;margin-right: auto;margin-top: 10%;margin-bottom: 1%">
+        <div style="margin-left:22%">
+            <a style="font-size:1.5em;width:15%;text-decoration:none;border: 2px solid white;color:white;background-color: #98FB98;padding:10px;border-radius: 10px 10px;padding:10% 20% 10% 20%" href="{% url 'login:connexion' %}" >CONNEXION</a>
+        </div>
+        <div style="margin-left:13%;">
+            <a style="font-size:1.5em;border: 2px solid green;width:15%;text-decoration:none;color:green;background-color: white;padding:10px;border-radius: 10px 10px;padding:10% 20% 10% 20%" >INSCRIPTION</a>
+        </div>
+    </div>
+    <div class="bar">
+        <div style="border:1px solid white;width:2px;height: 100px;margin-left:40%"></div>
+        <div style="border:1px solid white;width:2px;height: 100px;margin-left:19%"></div>
+    </div>
+    
+    <div class="row" style="height:60%;width: 60%;margin-left:auto;margin-right: auto;border:2px solid white;border-radius: 30px 30px;">
+            <div  class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+                <p>GESTION DE STOCK</p>
+            </div>
+            <div style="padding-left: 0.5em;" class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+                <p>GESTION DE VENTES</p>
+            </div>
+            <div style="padding-left: 0.5em;" class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+                <p>GESTION DE CLIENTS</p>
+            </div>
+    </div>
+    
+</body>
+</html>
