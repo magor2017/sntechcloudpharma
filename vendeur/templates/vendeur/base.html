@@ -12,7 +12,27 @@
     <!--<script src="main.js"></script>-->
 </head>
 <body>
-    {% block content %}
-    {% endblock%}
+        <div class="row">
+                <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2" id="menu" >
+                    
+                    <ul class="list-group">
+                        <li style="" class="list-group-item">CLOUDPHARMA</li>
+                        <li style="" class="list-group-item"><i class="fas fa-user-circle fa-2x"></i><span>Sntech</span></li>
+                        <li class="list-group-item list-group-item-action" href="#"><i class="fas fa-bars fa-2x"></i><a href="{% url 'vendeur:accueil'%}">Menu</a></li>
+                        <li class="list-group-item list-group-item-action" href="#">
+                            <i class="fas fa-headphones fa-2x"></i>
+                            <span>Assistance</span>
+                        </li>
+                        <!--<li class="list-group-item list-group-item-action"><i class="fas fa-shopping-cart fa-2x"></i><span>Vente</span></li>-->
+                        <li style="background-color: red;color:white" class="list-group-item list-group-item-action"><i class="fas fa-sign-out-alt fa-2x"></i><span>Deconnexion</span></li>
+                    </ul>
+                    
+                </div>
+                <div class="col-lg-9 col-md-9 col-xs-9 col-sm-9">
+                        {% block content %}
+                        {% endblock%}
+                </div>
+            </div>
+   
 </body>
 </html>
