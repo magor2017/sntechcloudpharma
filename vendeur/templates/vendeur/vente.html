@@ -1,0 +1,52 @@
+{% extends 'vendeur/base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'vendeur/css/vente.css' %}" />
+{% endblock %}
+{% block content %}
+    <div id="vente" style="padding:1%">
+        <div >
+            <form id="f1" class="form-inline" style="padding-left: 10%;padding-top: 20px">
+                
+                <input type="text" list="listeProduits"   style="margin-right: 1%" class="form-control" placeholder="produit"/>
+               <datalist id="listeProduits" >
+                    <option value="modou">modou</option>
+                    <option value="adama">adama</option>
+                </datalist>
+                <input type="text" class="form-control" placeholder="quantite" />
+                <span class="form-inline">
+                   <!-- <input id="c"  type="checkbox" class="form-control" onchange="remise();return false;" placeholder="remise" />
+                    <label style="color:white">remise</label>-->
+                    <button class="btn btn-secondary" onclick="remise();return false;">remise</button>
+                </span>
+                <button class="btn btn-primary" onclick="addProduct();return false;">Ajouter</button>
+            </form>
+            <div style="display: none;color:white;text-align: center;padding-left: 10%" id="r" class="form-inline" style="color:white;padding-left:10%">
+                <input type="text" class="form-control" />
+                <span style="margin-right: 2em">
+                    <label>Montant</label>
+                    <input type="radio" name="remise"/>
+                </span>
+                <span>
+                    <label>Pourcentage (%)</label>
+                    <input type="radio" name="remise" />
+                </span>
+            </div>
+        </div>
+        <div style="margin-top: 1%">
+            <table id="tabid" class="table table-condensed table-striped" style="color:white">
+                <tr>
+                    <th>Produits</th>
+                    <th>Quantite</th>
+                    <th>Prix</th>
+                    <th>Remise</th>
+                    <th>Prix</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+            <span style="color:white">Total : 10000</span>
+        </div>
+
+    </div>
+{% endblock %}
