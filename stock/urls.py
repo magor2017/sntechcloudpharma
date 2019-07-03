@@ -10,5 +10,6 @@ urlpatterns=[
     path('listProduct/',views.listProduct),
     path('listProductByRayon/',views.listProductByRayon),
     path('deleteProduct/',views.deleteProduct),
+    path('updateProduct/',views.updateProduct),
 ]
     

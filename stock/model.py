@@ -69,3 +69,49 @@ def deleteProduct(con,id):
         return r
     else:
         return -1
+Sql1="UPDATE `products` SET "
+Sql2="WHERE `ProductId`=%s"
+#function to update the ProducTitle attribut in the products table
+def updateProductTitle(con,data):
+    cursor=con.cursor()
+    sql=Sql1+"`ProductTitle`=%s "+Sql2
+    r=cursor.execute(sql,data)
+    con.commit()
+    return r
+#function to update the ProductDescription attribut in the products table
+def updateProductDescription(con,data):
+    cursor=con.cursor()
+    sql=Sql1+"`ProductDescription`=%s "+Sql2
+    r=cursor.execute(sql,data)
+    con.commit()
+    return r
+def updateUnitsInStock(con,data):
+    cursor=con.cursor()
+    sql=Sql1+"`UnitsInStock`=%s "+Sql2
+    r=cursor.execute(sql,data)
+    con.commit()
+    return r
+def updateSellingPrice(con,data):
+    cursor=con.cursor()
+    sql=Sql1+"`SellingPriceOfUnit`=%s "+Sql2
+    r=cursor.execute(sql,data)
+    con.commit()
+    return r
+def updatePurchasePrice(con,data):
+    cursor=con.cursor()
+    sql=Sql1+"`PurchasePriceOfUnit`=%s "+Sql2
+    r=cursor.execute(sql,data)
+    con.commit()
+    return r
+def updatePeremption(con,data):
+    cursor=con.cursor()
+    sql=Sql1+"`Peremption`=%s "+Sql2
+    r=cursor.execute(sql,data)
+    con.commit()
+    return r
+def updateTva(con,data):
+    cursor=con.cursor()
+    sql=Sql1+"`Tva`=%s "+Sql2
+    r=cursor.execute(sql,data)
+    con.commit()
+    return r
