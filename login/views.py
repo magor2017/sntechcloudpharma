@@ -4,6 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.http import JsonResponse
 import pymysql.cursors
+import json
 
 
 # Create your views here.
@@ -12,24 +13,13 @@ def index(request):
 def connexion(request):
     return render(request,'login/connexion.html')
 
-@csrf_exempt
-def verifData(request):
-    id='cloudpharma'
+@method_decorator(csrf_exempt)
+def auth(request):
+    iD='cloudpharma'
     password='cloudpharma'
-    connection = pymysql.connect(host='localhost',
-                             user='root',
-                             password='',
-                             db='cloudpharma',
-                             charset='utf8mb4',
-                             cursorclass=pymysql.cursors.DictCursor)
-    t=""
-    with connection.cursor() as cursor:
-        sql="SELECT * FROM users WHERE identifiant=%s AND password=%s"
-        cursor.execute(sql,(id,password,))
-        t=cursor.fetchone()
-    
-    if id==request.POST['id'] and password==request.POST['password']:
-        return JsonResponse({'erro':t})
+    req=json.loads(request.body)
+    if iD==req['id'] and password==req['password']:
+        return JsonResponse({'erro':'identifier'})
     else:
-        return JsonResponse({'erro':t})
+        return JsonResponse({'erro':'echec'})
 

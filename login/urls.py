@@ -20,5 +20,5 @@ app_name='login'
 urlpatterns = [
     path('',views.index),
     path('connexion/', views.connexion,name='connexion'),
-    path('verifData/',views.verifData,name='verifData'),
+    path('auth/',views.auth,name='auth'),
 ]
